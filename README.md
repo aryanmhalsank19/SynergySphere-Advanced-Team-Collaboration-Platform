@@ -45,5 +45,5 @@ Backend API at http://localhost:8000/api/
 
 🚀 Demo
 
-👉 Live Demo Link
- ← (replace this with your actual demo)
+👉 Live Demo Link : https://spark-synergy-pro.vercel.app/
+ 
