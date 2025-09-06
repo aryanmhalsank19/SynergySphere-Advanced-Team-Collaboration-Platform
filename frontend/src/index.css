@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SynergySphere Design System - Professional SaaS Colors */
+
+@layer base {
+  :root {
+    /* Brand Colors - Professional Blue-based palette */
+    --background: 0 0% 100%;
+    --foreground: 225 15% 20%;
+    
+    /* Cards & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 225 15% 20%;
+    --surface-elevated: 220 14% 96%;
+    
+    /* Primary Brand - Professional Blue */
+    --primary: 213 87% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 213 87% 50%;
+    --primary-subtle: 213 87% 95%;
+    
+    /* Success - Modern Green */
+    --success: 159 69% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-subtle: 159 69% 95%;
+    
+    /* Warning - Amber */
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
+    --warning-subtle: 25 95% 95%;
+    
+    /* Danger - Modern Red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-subtle: 0 72% 95%;
+    
+    /* Neutral System */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 213 87% 55%;
+    
+    /* Sidebar */
+    --sidebar-background: 225 15% 15%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 213 87% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 225 15% 20%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 225 15% 25%;
+    --sidebar-ring: 213 87% 55%;
+    
+    /* Status Colors */
+    --status-todo: 220 9% 46%;
+    --status-progress: 213 87% 55%;
+    --status-done: 159 69% 45%;
+    --status-blocked: 0 72% 51%;
+    
+    /* Priority Colors */
+    --priority-low: 159 69% 45%;
+    --priority-medium: 25 95% 53%;
+    --priority-high: 15 86% 56%;
+    --priority-urgent: 0 72% 51%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(213 87% 45%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(159 69% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(213 87% 45%), hsl(159 69% 45%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+    /* Transitions */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Status indicators */
+  .status-todo {
+    @apply bg-gray-100 text-gray-600;
+  }
+  
+  .status-progress {
+    @apply bg-blue-100 text-blue-600;
+  }
+  
+  .status-done {
+    @apply bg-green-100 text-green-600;
+  }
+  
+  .status-blocked {
+    @apply bg-red-100 text-red-600;
+  }
+  
+  /* Priority indicators */
+  .priority-low {
+    @apply text-green-600;
+  }
+  
+  .priority-medium {
+    @apply text-yellow-600;
+  }
+  
+  .priority-high {
+    @apply text-orange-600;
+  }
+  
+  .priority-urgent {
+    @apply text-red-600;
+  }
+  
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground));
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
